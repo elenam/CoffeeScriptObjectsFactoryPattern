@@ -86,7 +86,7 @@ class VehicleFactory
 
 factory = new VehicleFactory()
 try
-  factory.getVehicle()
+  aBroomstickMaybe = factory.getVehicle()
 catch error
   console.log error
 
@@ -97,7 +97,7 @@ factory = new CarFactory()
 
 movingThing = factory.getVehicle()
 
-console.log(movingThing.travelTime(100))
+console.log movingThing.travelTime(100)
 
 class BicycleFactory extends VehicleFactory
   getVehicle: () -> new Bicycle
@@ -107,6 +107,3 @@ factory = new BicycleFactory
 movingThing = factory.getVehicle()
 
 console.log movingThing.travelTime(100)
-
-unknownFactory = new VehicleFactory
-aBroomstickMaybe = unknownFactory.getVehicle() # this throws an error because there is no default getVehicle
